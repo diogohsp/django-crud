@@ -1,6 +1,6 @@
 from django.db import models
 
-#migrations serve para migrar seus objetos pythons para tabelas do BD SQL
+#migrations serve para migrar seus objetos pythons(models) para tabelas do BD SQL
 
 class User(models.Model):
     # cria um campo autmatico com um valor numerico sequencial não duplicavel
