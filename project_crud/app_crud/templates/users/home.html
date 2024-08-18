@@ -1,7 +1,12 @@
-{% extends 'users/users-layout.html' %} 
+{% extends 'users/users-layout.html' %}
 {% block content %}
 <form action="{% url 'users-list' %}" method="post">
   {% csrf_token %}
+  <!--
+{% csrf_token %} é um token de proteção contra ataques CSRF (Cross-Site Request Forgery).
+Ele garante que as solicitações POST enviadas ao servidor são legítimas e feitas pelo usuário autenticado.
+O Django verifica esse token para prevenir que um atacante envie solicitações maliciosas em nome do usuário.
+-->
   <div class="container d-flex justify-content-center">
     <div class="d-flex flex-column align-items-center gap-3">
       <h1>User Registration</h1>
