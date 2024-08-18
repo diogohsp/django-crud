@@ -1,0 +1,22 @@
+{% extends 'users/users-layout.html' %} 
+{% block content %}
+<form action="{% url 'users-list' %}" method="post">
+  {% csrf_token %}
+  <div class="container d-flex justify-content-center">
+    <div class="d-flex flex-column align-items-center gap-3">
+      <h1>User Registration</h1>
+      <div class="d-flex justify-content-start align-items-center w-100">
+        <p class="mb-0 me-3 form-control-sm" style="min-width: 50px">Name</p>
+        <input name="user_name" type="text" class="form-control w-100" />
+      </div>
+      <div class="d-flex justify-content-start align-items-center w-100">
+        <p class="mb-0 me-3 form-control-sm" style="min-width: 50px">Age</p>
+        <input name="user_age" type="text" class="form-control w-100" />
+      </div>
+      <button type="submit" class="btn btn-primary mt-3 form-control-sm">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
+{% endblock %}
